@@ -285,8 +285,10 @@ Command options
                             with PYTEST_MD_REPORT environment variable.
       --md-report-verbose=VERBOSITY_LEVEL
                             Verbosity level for pytest-md-report.
+                            0: output test results by test file.
+                            1: output test results by test function.
+                            2: output test results by test function's parameters.
                             If not set, use the verbosity level of pytest.
-                            Defaults to 0.
                             you can also specify the value with
                             PYTEST_MD_REPORT_VERBOSE environment variable.
       --md-report-output=FILEPATH
@@ -376,8 +378,11 @@ ini-options
 
   md_report (bool):     Create a Markdown report.
   md_report_verbose (string):
-                        Verbosity level for pytest-md-report. If not set, use
-                        the verbosity level of pytest. Defaults to 0.
+                        Verbosity level for pytest-md-report. 0: output test
+                        results by test file. 1: output test results by test
+                        function. 2: output test results by test function's
+                        parameters. If not set, use the verbosity level of
+                        pytest.
   md_report_color (string):
                         How coloring output reports. auto: detect the output
                         destination and colorize reports appropriately with the
