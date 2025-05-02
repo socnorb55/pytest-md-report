@@ -22,6 +22,10 @@ clean:
 fmt:
 	@$(PYTHON) -m tox -e fmt
 
+.PHONY: help
+help:
+	$(PYTHON) -m pytest --help
+
 .PHONY: release
 release:
 	$(PYTHON) -m tox -e release
